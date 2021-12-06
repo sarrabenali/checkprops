@@ -1,24 +1,34 @@
-import logo from './logo.svg';
 import './App.css';
+import profile from './profil/profile.js';
+import myPic from './profil/pic.jpg';
 
 function App() {
+  const profileStyle = {
+    backgroundColor: "rgb",
+    margin: 15,
+    borderRadius: 20
+
+};
+
+const profilePicStyle = {
+  width: 400,
+  margin: 15,
+  borderRadius: 20
+};
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div >
+        <div style={profileStyle}></div>
+      <profile
+      fullName="SarahBenali" 
+      bio="this is my bio" 
+      profession="developpeuse">
+      <img src={myPic} alt="this is my profile pic" style={profilePicStyle} />
+      </profile>
+      </div>
+    
     </div>
+  
   );
 }
 
